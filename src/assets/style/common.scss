@@ -16,14 +16,43 @@
 .l-grid {
     display: grid;
     
+    &--col2 {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
     &--col4 {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 1rem;
+    }
+
+    &__areaA {
+        grid-column: 1;
+    }
+    &__areaB {
+        grid-column: 2;
     }
 }
 .l-row {
     display: flex;
     flex-direction: row;
+
+    &--reversed {
+        flex-direction: row-reverse;
+    }
+}
+.l-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &--half {
+        width: 50%;
+    }
+    &--1third {
+        width: calc(100% / 3);
+    }
+    &--2third {
+        width: calc(100% * 2 / 3);
+    }
 }
 .l-spaceBetween {
     justify-content: space-between;
