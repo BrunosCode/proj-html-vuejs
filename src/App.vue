@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Header :logo-img="'white-logo-2.png'" :header-nav="headerNav" :bg-color="'primary'"/>
     <!-- Header with logo and headerNav component-->
     <main class="c-main">
       <!-- Hero -->
@@ -16,16 +17,26 @@
 </template>
 
 <script>
-ì
+import Header from "./components/Header.vue"
+import headerNav from "./data/headerNav.json"
 
 export default {
   name: 'App',
   components: {
-    
+    Header,
+
+  },
+  data() {
+    return {
+      headerNav,
+
+    }
   }
 }
 </script>
 
 <style lang="scss">
+@import "./assets/style/variables.scss";
+@import "./assets/style/common.scss";
 
 </style>
