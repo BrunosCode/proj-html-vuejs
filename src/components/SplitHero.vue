@@ -1,9 +1,9 @@
 <template>
-  <div class="c-hero">
+  <section class="c-hero">
     <div :class="{'l-row--reversed': isReversed}" class="l-container l-row l-alignCenter">
       <div class="l-col--half">
         <div class="l-col--2third">
-          <h4 v-if="content.pretitle" class="c-hero__pretitle">{{content.pretitle}}</h4>
+          <h5 v-if="content.pretitle" class="c-hero__pretitle">{{content.pretitle}}</h5>
           <h2 v-if="content.title" class="c-hero__title h-mb--2">{{content.title}}</h2>
           <p v-if="content.text" class="c-hero__text h-mb--4">{{content.text}}</p>
           <div v-if="content.buttons">
@@ -17,7 +17,7 @@
         <img class="c-hero__img" :src="require(`../assets/images/${content.img.src}`)" :alt="content.img.alt">
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -1,14 +1,14 @@
 <template>
   <footer :class="`h-bg--${bgColor}`" class="c-footer h-p--2">
     <!-- Upper footer -->
-    <div class="l-container l-grid l-grid--col4">
-      <div>
+    <div class="l-container l-row h-py--2">
+      <div class="l-col--1fourth">
         <Logo class="h-mb--1"/>
         <p class="c-footer__text">{{companyInfo.slogan}}</p>
       </div>
 
       <nav v-for="(nav, i) in footerNav" :key="i"
-      class="c-footer__nav">
+      class="c-footer__nav l-col--1fourth">
         <h3 class="c-footer__title h-mb--1">{{nav.title}}</h3>
         <!-- Print data from the prop json file -->
         <ul class="h-listReset">
@@ -19,7 +19,7 @@
         </ul>
       </nav>
 
-      <div>
+      <div class="l-col--1fourth">
         <h3 class="c-footer__title h-mb--1">Contact Us</h3>
         <p class="c-footer__text h-mb--1"><strong>Address:</strong> {{companyInfo.address}}</p>
         <p class="c-footer__text"><strong>Phone:</strong> {{companyInfo.phone}}</p>
