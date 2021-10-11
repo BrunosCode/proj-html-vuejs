@@ -35,6 +35,7 @@
     border-radius: 1rem;
     color: inherit;
     background-color: $water;
+    text-transform: capitalize;
 
     &--blue {
         @include bgGradient(90deg, $water, $lightBlue);
@@ -54,6 +55,65 @@
 }
 
 // HELPERS
+$sizes: .5rem, 1rem, 2rem;
+
+// Padding helpers
+@each $size in $sizes {
+  $i : index($sizes, $size);  
+  .h-p--#{$i} {
+    padding: $size;
+  }
+  .h-py--#{$i} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+  .h-px--#{$i} {
+    padding-right: $size;
+    padding-left: $size;
+  }
+  .h-pr--#{$i} {
+    padding-right: $size;
+  }
+  .h-pl--#{$i} {
+    padding-left: $size;
+  }
+  .h-pt--#{$i} {
+    padding-top: $size;
+  }
+  .h-pb--#{$i} {
+    padding-bottom: $size;
+  }
+}
+
+// Margin helpers
+@each $size in $sizes {
+  $i : index($sizes, $size);  
+  .h-m--#{$i} {
+    margin: $size;
+  }
+  .h-my--#{$i} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+  .h-mx--#{$i} {
+    margin-right: $size;
+    margin-left: $size;
+  }
+  .h-mr--#{$i} {
+    margin-right: $size;
+  }
+  .h-ml--#{$i} {
+    margin-left: $size;
+  }
+  .h-mt--#{$i} {
+    margin-top: $size;
+  }
+  .h-mb--#{$i} {
+    margin-bottom: $size;
+  }
+}
+
+
 .h-bg--primary {
     background: $blue;
 }

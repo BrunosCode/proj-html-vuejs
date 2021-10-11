@@ -1,5 +1,5 @@
 <template>
-  <header :class="`h-bg--${bgColor}`" class="c-header">
+  <header :class="`h-bg--${bgColor}`" class="c-header h-p--2">
     <div class="l-container l-row l-spaceBetween l-alignCenter">
       <img :src="require(`../assets/images/${logoImg}`)" alt="#" class="c-logo c-header__logo">
 
@@ -8,11 +8,11 @@
         <ul class="l-row l-alignCenter h-listReset">
           <li v-for="(link, i) in headerNav.links" :key="i">
             <a :class="{'h-active': link.text === 'home'}" 
-            :href="link.link" class="c-link c-header__link">{{link.text}}</a>
+            :href="link.link" class="c-link c-header__link h-ml--2">{{link.text}}</a>
           </li>
-          <li v-for="(btn, i) in headerNav.buttons" :key="i">
+          <li v-for="(btn, i) in headerNav.buttons" :key="`${i} + 6`">
             <a :class="`c-btn--${btn.type}`" :href="btn.link" 
-            class="c-btn c-header__link">{{btn.text}}</a>
+            class="c-btn h-ml--2">{{btn.text}}</a>
           </li>
         </ul>
       </nav>
@@ -35,7 +35,6 @@ export default {
 @import "../assets/style/variables.scss";
 
 .c-header {
-  padding: 1rem;
   color: $white;
 
   &__logo {
@@ -43,7 +42,6 @@ export default {
   }
 
   &__link {
-    margin-left: 1rem;
     text-transform: capitalize;
 
     &.h-active {

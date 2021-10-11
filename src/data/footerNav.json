@@ -1,0 +1,35 @@
+{
+    "links": [
+        {
+            "text": "home",
+            "link": "#"
+        },
+        {
+            "text": "about",
+            "link": "#"
+        },
+        {
+            "text": "services",
+            "link": "#"
+        },
+        {
+            "text": "blog",
+            "link": "#"
+        },
+        {
+            "text": "contact",
+            "link": "#"
+        },
+        {
+            "text": "portfolio",
+            "link": "#"
+        }
+    ],
+    "buttons": [
+        {
+            "text": "sign in",
+            "link": "#",
+            "type": "blue"
+        }
+    ]
+}
