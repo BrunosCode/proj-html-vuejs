@@ -1,0 +1,5 @@
+// MIXINS
+@mixin bgGradient ($deg, $firstColor, $secondColor) {
+    background-image: linear-gradient($deg, $firstColor, $secondColor);
+}
+

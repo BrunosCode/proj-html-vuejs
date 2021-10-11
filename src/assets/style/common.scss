@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 // RESET
 * {
@@ -8,6 +9,10 @@
 }
 
 // LAYOUTS
+.l-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
 .l-row {
     display: flex;
     flex-direction: row;
@@ -23,6 +28,29 @@
 .c-link {
     text-decoration: none;
     color: inherit;
+}
+.c-btn {
+    text-decoration: none;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    color: inherit;
+    background-color: $water;
+
+    &--blue {
+        @include bgGradient(90deg, $water, $lightBlue);
+
+        &:hover {
+            @include bgGradient(270deg, $water, $lightBlue);
+        }
+    }
+
+    &--red {
+        @include bgGradient(90deg, $salmon, $magenta);
+
+        &:hover {
+            @include bgGradient(270deg, $salmon, $magenta);
+        }
+    }
 }
 
 // HELPERS
