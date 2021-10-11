@@ -13,6 +13,14 @@
     max-width: 1600px;
     margin: 0 auto;
 }
+.l-grid {
+    display: grid;
+    
+    &--col4 {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+    }
+}
 .l-row {
     display: flex;
     flex-direction: row;
@@ -28,6 +36,11 @@
 .c-link {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+        cursor: pointer;
+        color: $magenta;
+    }
 }
 .c-btn {
     text-decoration: none;
@@ -36,6 +49,9 @@
     color: inherit;
     background-color: $water;
     text-transform: capitalize;
+    &:hover {
+        cursor: pointer;
+    }
 
     &--blue {
         @include bgGradient(90deg, $water, $lightBlue);
@@ -55,7 +71,7 @@
 }
 
 // HELPERS
-$sizes: .5rem, 1rem, 2rem;
+$sizes: .5rem, 1rem, 2rem, 3rem;
 
 // Padding helpers
 @each $size in $sizes {

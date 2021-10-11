@@ -1,8 +1,7 @@
 <template>
   <header :class="`h-bg--${bgColor}`" class="c-header h-p--2">
     <div class="l-container l-row l-spaceBetween l-alignCenter">
-      <img :src="require(`../assets/images/${logoImg}`)" alt="#" class="c-logo c-header__logo">
-
+      <Logo/>
       <nav class="c-header__nav">
         <!-- Print data from the prop json file -->
         <ul class="l-row l-alignCenter h-listReset">
@@ -21,10 +20,14 @@
 </template>
 
 <script>
+import Logo from "./Logo.vue"
+
 export default {
   name: 'Header',
+  components: {
+    Logo
+  },
   props: {
-    logoImg: String,
     headerNav: Object,
     bgColor: String
   }
@@ -37,14 +40,11 @@ export default {
 .c-header {
   color: $white;
 
-  &__logo {
-    height: 3rem;
-  }
-
   &__link {
     text-transform: capitalize;
 
     &.h-active {
+      font-size: 700;
       color: $magenta;
     }
   }

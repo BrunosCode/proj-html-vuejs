@@ -1,35 +1,44 @@
-{
-    "links": [
-        {
-            "text": "home",
-            "link": "#"
-        },
-        {
-            "text": "about",
-            "link": "#"
-        },
-        {
-            "text": "services",
-            "link": "#"
-        },
-        {
-            "text": "blog",
-            "link": "#"
-        },
-        {
-            "text": "contact",
-            "link": "#"
-        },
-        {
-            "text": "portfolio",
-            "link": "#"
-        }
-    ],
-    "buttons": [
-        {
-            "text": "sign in",
-            "link": "#",
-            "type": "blue"
-        }
-    ]
-}
+[
+    {
+        "title": "quick links",
+        "links": [
+            {
+                "text": "services",
+                "link": "#"
+            },
+            {
+                "text": "contact",
+                "link": "#"
+            },
+            {
+                "text": "blog",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "title": "resources",
+        "links": [
+            {
+                "text": "art design",
+                "link": "#"
+            },
+            {
+                "text": "computer",
+                "link": "#"
+            },
+            {
+                "text": "IT news",
+                "link": "#"
+            },
+            {
+                "text": "networking",
+                "link": "#"
+            },
+            {
+                "text": "web security",
+                "link": "#"
+            }
+        ]
+    }
+]

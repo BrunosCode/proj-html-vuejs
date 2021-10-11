@@ -1,0 +1,30 @@
+{
+    "name": "Phlox Corporate",
+    "slogan": "When, while lovely valley teems vapour aroundmeand meridian sun strikes the upper impenetrable",
+    "address": "Patricia C. Amedee 4401 Waldeck Street Grapevine Nashvile, Tx 76051",
+    "phone": "+99 (0) 101 0000 888",
+    "email": "info@yourdomain.com",
+    "copyright": "© 2020 Phlox. All Rights Reserved",
+    "socialLinks": [
+        {
+            "social": "instagram",
+            "link": "#",
+            "icon": ""
+        },
+        {
+            "social": "linkedin",
+            "link": "#",
+            "icon": ""
+        },
+        {
+            "social": "facebook",
+            "link": "#",
+            "icon": ""
+        },
+        {
+            "social": "twitter",
+            "link": "#",
+            "icon": ""
+        }
+    ]
+}
