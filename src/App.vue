@@ -8,6 +8,7 @@
       <SplitHero :content="startYourProject" class="h-py--3" />
       <!-- CaruselSection -->
       <CardsSection :content="ourPricing" class="h-py--4" />
+      <PostsSection :content="latestPosts" class="h-py--4" />
       <!-- PostsSection -->
       <!-- TestimonialsSection -->
       <!-- LogosSection -->
@@ -24,6 +25,8 @@ import Footer from "./components/Footer.vue";
 import SplitHero from "./components/sections/SplitHero.vue";
 import ColumnsSection from "./components/sections/ColumnsSection.vue";
 import CardsSection from "./components/sections/CardsSection.vue";
+import PostsSection from "./components/sections/PostsSection.vue";
+
 
 // Section Data
 import companyInfo from "./data/companyInfo.json";
@@ -32,16 +35,18 @@ import homeHero from "./data/homeHero.json";
 import ourServices from "./data/ourServices.json";
 import startYourProject from "./data/startYourProject.json";
 import ourPricing from "./data/ourPricing.json";
+import latestPosts from "./data/latestPosts.json";
 import footerNav from "./data/footerNav.json";
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer,
     SplitHero,
     ColumnsSection,
-    CardsSection
+    CardsSection,
+    PostsSection,
+    Footer
   },
   data() {
     return {
@@ -51,6 +56,7 @@ export default {
       ourServices,
       startYourProject,
       ourPricing,
+      latestPosts,
       footerNav
     }
   }

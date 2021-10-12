@@ -53,6 +53,12 @@
 .l-alignCenter {
     align-items: center;
 }
+.l-alignStart {
+    align-items: flex-start;
+}
+.l-alignEnd {
+    align-items: flex-end;
+}
 .l-justifyCenter {
     justify-content: center;
 }
@@ -74,6 +80,7 @@
     text-decoration: none;
     padding: .5rem 2rem;
     border-radius: 1rem;
+    color: $gray-900;
     background-color: $white;
     text-transform: capitalize;
     &:hover {
