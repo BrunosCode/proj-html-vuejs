@@ -7,7 +7,7 @@
       <ColumnsSection :content="ourServices" class="h-py--3"/>
       <SplitHero :content="startYourProject" :is-reversed="true" class="h-py--3" />
       <!-- CaruselSection -->
-      <!-- CardsSection -->
+      <CardsSection :content="ourPricing" class="h-py--3" />
       <!-- PostsSection -->
       <!-- TestimonialsSection -->
       <!-- LogosSection -->
@@ -22,6 +22,7 @@ import Footer from "./components/Footer.vue";
 
 import SplitHero from "./components/SplitHero.vue";
 import ColumnsSection from "./components/ColumnsSection.vue";
+import CardsSection from "./components/CardsSection.vue";
 
 import companyInfo from "./data/companyInfo.json";
 import headerNav from "./data/headerNav.json";
@@ -33,7 +34,8 @@ export default {
     Header,
     Footer,
     SplitHero,
-    ColumnsSection
+    ColumnsSection,
+    CardsSection
   },
   data() {
     return {
@@ -125,6 +127,68 @@ export default {
               src: "Group-566.png"
             }
           }
+        ]
+      },
+      ourPricing: {
+        pretitle: "Price list",
+        title: "Our pricing",
+        text: "When, while the lovely valley teems with vapour around meand the",
+        cards: [
+          {
+            title: "Designing",
+            subtitle: "process",
+            price: "40",
+            color: "white",
+            features: [
+              "Creative design enabled",
+              "Vibrant color usage",
+              "Eye catching design",
+              "Extreme typography",
+              "Exceptional design"
+            ],
+            button: {
+              text: "Order now",
+              link: "#",
+              type: "arrowRed"
+            }
+          },
+          {
+            title: "Developing",
+            subtitle: "product",
+            price: "60",
+            color: "red",
+            features: [
+              "Creative design enabled",
+              "Vibrant color usage",
+              "Eye catching design",
+              "Extreme typography",
+              "Exceptional design"
+            ],
+            button: {
+              text: "Order now",
+              link: "#",
+              type: "arrowWhite"
+            }
+          },
+          {
+            title: "Supporting",
+            subtitle: "clients",
+            price: "80",
+            color: "white",
+            features: [
+              "Creative design enabled",
+              "Vibrant color usage",
+              "Eye catching design",
+              "Extreme typography",
+              "Exceptional design"
+            ],
+            button: {
+              text: "Order now",
+              link: "#",
+              type: "arrowRed"
+            }
+          },
+          
         ]
       }
     }

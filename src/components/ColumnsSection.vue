@@ -49,11 +49,4 @@ export default {
     color: $magenta;
   }
 }
-// .c-col {
-  
-//   &__img {
-//     width: 50%;
-//   }
-// }
-
 </style>

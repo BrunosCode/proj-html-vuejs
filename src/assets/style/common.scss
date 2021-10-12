@@ -56,7 +56,10 @@
 .l-justifyCenter {
     justify-content: center;
 }
-
+.floatLeft {
+    display: float;
+    float: left;
+}
 // COMPONETS
 .c-link {
     text-decoration: none;
@@ -71,14 +74,15 @@
     text-decoration: none;
     padding: .5rem 2rem;
     border-radius: 1rem;
-    color: $white;
-    background-color: $water;
+    color: $magenta;
+    background-color: $white;
     text-transform: capitalize;
     &:hover {
         cursor: pointer;
     }
 
     &--blue {
+        color: $white;
         @include bgGradient(90deg, $water, $lightBlue);
 
         &:hover {
@@ -87,12 +91,33 @@
     }
 
     &--red {
+        color: $white;
         @include bgGradient(90deg, $salmon, $magenta);
 
         &:hover {
             @include bgGradient(270deg, $salmon, $magenta);
         }
     }
+
+    &--arrowWhite {
+        &::after {
+            content: ">";
+            margin-left: 3rem;
+        }
+    }
+    
+    &--arrowRed {
+        color: $white;
+        @include bgGradient(0deg, $salmon, $magenta);
+        
+        &:hover {
+            @include bgGradient(180deg, $salmon, $magenta);
+        }
+        &::after {
+            margin-left: 3rem;
+            content: ">";
+        }
+    } 
 }
 
 // HELPERS
