@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Logo from "./Logo.vue";
+import Logo from "./elements/Logo.vue";
 
 export default {
   name: 'Footer',

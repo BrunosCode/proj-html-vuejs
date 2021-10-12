@@ -1,0 +1,21 @@
+{
+    "component": "SplitHero",
+    "title": "Business planning digital technology modern solution !",
+    "text": "When, while the valley teems with vapour around meand the meridian sun strikes the upper surface .",
+    "buttons": [
+        {
+            "text": "Try it now",
+            "link": "#",
+            "type": "red"
+        },
+        {
+            "text": "Explore More",
+            "link": "#",
+            "type": "blue"
+        }
+    ],
+    "img": {
+        "alt": "Man behind the desk",
+        "src": "header.png"
+    }
+}

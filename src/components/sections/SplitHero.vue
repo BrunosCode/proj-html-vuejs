@@ -1,6 +1,6 @@
 <template>
   <section class="c-hero">
-    <div :class="{'l-row--reversed': isReversed}" class="l-container l-row l-alignCenter">
+    <div :class="{'l-row--reversed': content.isReversed}" class="l-container l-row l-alignCenter">
       <div class="l-col--half">
         <div class="l-col--2third">
           <h5 v-if="content.pretitle" class="c-hero__pretitle">{{content.pretitle}}</h5>
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="l-col--half h-m--2">
-        <img class="c-hero__img" :src="require(`../assets/images/${content.img.src}`)" :alt="content.img.alt">
+        <img class="c-hero__img" :src="require(`../../assets/images/${content.img.src}`)" :alt="content.img.alt">
       </div>
     </div>
   </section>
@@ -32,8 +32,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/style/variables.scss";
-@import "../assets/style/mixins.scss";
+@import "../../assets/style/variables.scss";
+@import "../../assets/style/mixins.scss";
 
 .c-hero {
   color: $white;
@@ -42,6 +42,10 @@ export default {
   &__title {
     text-transform: capitalize;
     font-size: 3rem;
+  }
+
+  &__img {
+    max-width: 100%;
   }
 }
 

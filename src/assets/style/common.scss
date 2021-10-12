@@ -10,7 +10,7 @@
 
 // LAYOUTS
 .l-container {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .l-grid {
@@ -74,7 +74,6 @@
     text-decoration: none;
     padding: .5rem 2rem;
     border-radius: 1rem;
-    color: $magenta;
     background-color: $white;
     text-transform: capitalize;
     &:hover {
@@ -99,25 +98,24 @@
         }
     }
 
-    &--arrowWhite {
+    &--arrow {
+        color: $magenta;
+        padding: .5rem 1rem;
+
         &::after {
             content: ">";
-            margin-left: 3rem;
+            margin-left: 1.5rem;
         }
+        &Red {
+            color: $white;
+            @include bgGradient(0deg, $salmon, $magenta);
+            
+            &:hover {
+                @include bgGradient(180deg, $salmon, $magenta);
+            }
+        } 
     }
     
-    &--arrowRed {
-        color: $white;
-        @include bgGradient(0deg, $salmon, $magenta);
-        
-        &:hover {
-            @include bgGradient(180deg, $salmon, $magenta);
-        }
-        &::after {
-            margin-left: 3rem;
-            content: ">";
-        }
-    } 
 }
 
 // HELPERS

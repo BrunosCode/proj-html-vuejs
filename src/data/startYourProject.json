@@ -1,0 +1,23 @@
+{
+    "component": "SplitHero",
+    "isReversed": true,
+    "pretitle": "Start you project",
+    "title": "Grow your business with our strategy",
+    "text": "When, while the valley teems with vapour around meand the meridian sun strikes the upper surface of the impenetrable follage of my trees, and but a few stray gleams steal into the inner sanctury.",
+    "buttons": [
+        {
+            "text": "Try it now",
+            "link": "#",
+            "type": "red"
+        },
+        {
+            "text": "Explore More",
+            "link": "#",
+            "type": "blue"
+        }
+    ],
+    "img": {
+        "alt": "Man over stacks",
+        "src": "men-data.png"
+    }
+}
