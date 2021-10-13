@@ -1,7 +1,9 @@
 <template>
-  <footer :class="`h-bg--${bgColor}`" class="c-footer h-p--2">
+  <footer :class="`h-bg--${bgColor}`" class="c-footer">
+    <CtaBanner :content="cta" class="c-footer__banner h-py--4" />
+
     <!-- Upper footer -->
-    <div class="l-container l-row h-py--2">
+    <div class="l-container l-row h-pb--4">
       <div class="l-col--1fourth">
         <Logo class="h-mb--1"/>
         <p class="c-footer__text">{{companyInfo.slogan}}</p>
@@ -40,16 +42,26 @@
 
 <script>
 import Logo from "./elements/Logo.vue";
+import CtaBanner from "./elements/CtaBanner.vue";
 
 export default {
   name: 'Footer',
   components: {
-    Logo
+    Logo,
+    CtaBanner
   },
   props: {
     footerNav: Array,
     companyInfo: Object,
     bgColor: String
+  },
+  data() {
+    return {
+      cta: {
+        "title": "We offer awesome services",
+        "text": "When, while lovely valley teems with vapour around meand meridian sun strikes the upper surface."
+      }
+    }
   }
 }
 </script>
@@ -61,6 +73,11 @@ export default {
 .c-footer {
   color: $white;
   @include bgGradient(180deg, $blue, $darkBlue);
+
+  &__banner {
+    position: relative;
+    top: -5rem;
+  }
 
   &__title,
   &__link {

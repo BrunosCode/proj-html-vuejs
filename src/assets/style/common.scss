@@ -47,6 +47,9 @@
         width: 25%;
     }
 }
+.l-spaceAround {
+    justify-content: space-around;
+}
 .l-spaceBetween {
     justify-content: space-between;
 }
@@ -83,6 +86,7 @@
     color: $gray-900;
     background-color: $white;
     text-transform: capitalize;
+    border: none;
     &:hover {
         cursor: pointer;
     }
@@ -126,7 +130,7 @@
 }
 
 // HELPERS
-$sizes: .5rem, 1rem, 2rem, 3rem;
+$sizes: .5rem, 1rem, 2rem, 3rem, 4rem, 5rem;
 
 // Padding helpers
 @each $size in $sizes {

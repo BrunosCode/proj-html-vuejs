@@ -1,0 +1,25 @@
+{
+    "component": "LogosSection",
+    "logos": [
+        {
+            "img": "client-1-1.png",
+            "alt": "Golden"
+        },
+        {
+            "img": "clienty-2.png",
+            "alt": "Golden"
+        },
+        {
+            "img": "clienty-3.png",
+            "alt": "Golden"
+        },
+        {
+            "img": "clienty-4.png",
+            "alt": "Golden"
+        },
+        {
+            "img": "client-5.png",
+            "alt": "Golden"
+        }
+    ]
+}

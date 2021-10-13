@@ -10,9 +10,7 @@
       <CardsSection :content="ourPricing" class="h-py--4" />
       <PostsSection :content="latestPosts" class="h-py--4" />
       <TestimonialsSection :content="testimonials" class="h-py--4" />
-      <!-- TestimonialsSection -->
-      <!-- LogosSection -->
-      <!-- CtaBanner -->
+      <LogosSection :content="partnerLogos" class="h-pb--6" />
     </main>
     <Footer :footer-nav="footerNav" :company-info="companyInfo" :bg-color="'primary'"/>
   </div>
@@ -28,6 +26,7 @@ import ColumnsSection from "./components/sections/ColumnsSection.vue";
 import CardsSection from "./components/sections/CardsSection.vue";
 import PostsSection from "./components/sections/PostsSection.vue";
 import TestimonialsSection from "./components/sections/TestimonialsSection.vue";
+import LogosSection from "./components/sections/LogosSection.vue";
 
 
 // Section Data
@@ -39,6 +38,7 @@ import startYourProject from "./data/startYourProject.json";
 import ourPricing from "./data/ourPricing.json";
 import latestPosts from "./data/latestPosts.json";
 import testimonials from "./data/testimonials.json";
+import partnerLogos from "./data/partnerLogos.json";
 import footerNav from "./data/footerNav.json";
 
 export default {
@@ -50,6 +50,7 @@ export default {
     CardsSection,
     PostsSection,
     TestimonialsSection,
+    LogosSection,
     Footer
   },
   data() {
@@ -62,6 +63,7 @@ export default {
       ourPricing,
       latestPosts,
       testimonials,
+      partnerLogos,
       footerNav
     }
   }
