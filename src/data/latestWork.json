@@ -1,0 +1,42 @@
+{
+    "component": "CarouselSection",
+    "pretitle": "Porfolio",
+    "title": "Latest work",
+    "works": [
+        {
+            "title": "Basket of Flower on table 0",
+            "subtitle": "Branding Strategy",
+            "img": "8wa60okr-1-790x576.jpg"
+        },
+        {
+            "title": "Basket of Flower on table 1",
+            "subtitle": "Branding Strategy",
+            "img": "8wa60okr-1-790x576.jpg"
+        },
+        {
+            "title": "Basket of Flower on table 2",
+            "subtitle": "Branding Strategy",
+            "img": "8wa60okr-1-790x576.jpg"
+        },
+        {
+            "title": "Basket of Flower on table 3",
+            "subtitle": "Branding Strategy",
+            "img": "8wa60okr-1-790x576.jpg"
+        },
+        {
+            "title": "Basket of Flower on table 4",
+            "subtitle": "Branding Strategy",
+            "img": "8wa60okr-1-790x576.jpg"
+        },
+        {
+            "title": "Basket of Flower on table 5",
+            "subtitle": "Branding Strategy",
+            "img": "8wa60okr-1-790x576.jpg"
+        },
+        {
+            "title": "Basket of Flower on table 6",
+            "subtitle": "Branding Strategy",
+            "img": "8wa60okr-1-790x576.jpg"
+        }
+    ]
+}

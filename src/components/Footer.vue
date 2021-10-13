@@ -10,7 +10,7 @@
       </div>
 
       <nav v-for="(nav, i) in footerNav" :key="i"
-      class="c-footer__nav l-col--1fourth">
+      class="c-footer__nav l-col--1fourth h-px--3">
         <h3 class="c-footer__title h-mb--1">{{nav.title}}</h3>
         <!-- Print data from the prop json file -->
         <ul class="h-listReset">
@@ -30,11 +30,13 @@
     </div>
 
     <!-- Bottom footer -->
-    <div class="l-container l-row l-spaceBetween c-footer__bottom">
-      <p class="c-footer__text">{{companyInfo.copyright}}</p>
-      <div class="c-footer__icons">
-        <a v-for="(icon, i) in companyInfo.socialLinks" :key="i" :href="icon.link"
-        class="c-link h-ml--1">{{icon.social}}</a>
+    <div class="c-footer__bottom">
+      <div class="l-container l-row l-spaceBetween ">
+        <p class="c-footer__text">{{companyInfo.copyright}}</p>
+        <div class="c-footer__icons">
+          <a v-for="(icon, i) in companyInfo.socialLinks" :key="i" :href="icon.link"
+          class="c-link h-ml--1">{{icon.social}}</a>
+        </div>
       </div>
     </div>
   </footer>

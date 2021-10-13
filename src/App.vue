@@ -6,10 +6,10 @@
       <SplitHero :content="homeHero" class="h-py--4" />
       <ColumnsSection :content="ourServices" class="h-py--4"/>
       <SplitHero :content="startYourProject" class="h-py--3" />
-      <!-- CaruselSection -->
+      <CarouselSection :content="latestWork" class="h-py--3" />
       <CardsSection :content="ourPricing" class="h-py--4" />
       <PostsSection :content="latestPosts" class="h-py--4" />
-      <TestimonialsSection :content="testimonials" class="h-py--4" />
+      <TestimonialsSection :content="testimonials" class="h-py--3" />
       <LogosSection :content="partnerLogos" class="h-pb--6" />
     </main>
     <Footer :footer-nav="footerNav" :company-info="companyInfo" :bg-color="'primary'"/>
@@ -23,6 +23,7 @@ import Footer from "./components/Footer.vue";
 // Section Compontents
 import SplitHero from "./components/sections/SplitHero.vue";
 import ColumnsSection from "./components/sections/ColumnsSection.vue";
+import CarouselSection from "./components/sections/CarouselSection.vue";
 import CardsSection from "./components/sections/CardsSection.vue";
 import PostsSection from "./components/sections/PostsSection.vue";
 import TestimonialsSection from "./components/sections/TestimonialsSection.vue";
@@ -35,6 +36,7 @@ import headerNav from "./data/headerNav.json";
 import homeHero from "./data/homeHero.json";
 import ourServices from "./data/ourServices.json";
 import startYourProject from "./data/startYourProject.json";
+import latestWork from "./data/latestWork.json";
 import ourPricing from "./data/ourPricing.json";
 import latestPosts from "./data/latestPosts.json";
 import testimonials from "./data/testimonials.json";
@@ -47,6 +49,7 @@ export default {
     Header,
     SplitHero,
     ColumnsSection,
+    CarouselSection,
     CardsSection,
     PostsSection,
     TestimonialsSection,
@@ -60,6 +63,7 @@ export default {
       homeHero,
       ourServices,
       startYourProject,
+      latestWork,
       ourPricing,
       latestPosts,
       testimonials,
