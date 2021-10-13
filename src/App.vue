@@ -9,7 +9,7 @@
       <!-- CaruselSection -->
       <CardsSection :content="ourPricing" class="h-py--4" />
       <PostsSection :content="latestPosts" class="h-py--4" />
-      <!-- PostsSection -->
+      <TestimonialsSection :content="testimonials" class="h-py--4" />
       <!-- TestimonialsSection -->
       <!-- LogosSection -->
       <!-- CtaBanner -->
@@ -22,10 +22,12 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
+// Section Compontents
 import SplitHero from "./components/sections/SplitHero.vue";
 import ColumnsSection from "./components/sections/ColumnsSection.vue";
 import CardsSection from "./components/sections/CardsSection.vue";
 import PostsSection from "./components/sections/PostsSection.vue";
+import TestimonialsSection from "./components/sections/TestimonialsSection.vue";
 
 
 // Section Data
@@ -36,6 +38,7 @@ import ourServices from "./data/ourServices.json";
 import startYourProject from "./data/startYourProject.json";
 import ourPricing from "./data/ourPricing.json";
 import latestPosts from "./data/latestPosts.json";
+import testimonials from "./data/testimonials.json";
 import footerNav from "./data/footerNav.json";
 
 export default {
@@ -46,6 +49,7 @@ export default {
     ColumnsSection,
     CardsSection,
     PostsSection,
+    TestimonialsSection,
     Footer
   },
   data() {
@@ -57,6 +61,7 @@ export default {
       startYourProject,
       ourPricing,
       latestPosts,
+      testimonials,
       footerNav
     }
   }
