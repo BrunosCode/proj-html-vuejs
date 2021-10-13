@@ -7,6 +7,7 @@
       :class="{'c-card--red': card.color === 'red'}" class="l-floatLeft c-card h-p--4">
         <h3 v-if="card.title" class="c-card__title h-mb--2">{{card.title}}</h3>
         <h5 v-if="card.subtitle" class="c-card__subtitle h-mb--2">{{card.subtitle}}</h5>
+        <p v-if="card.price" class="c-card__text h-mr--4">$</p>
         <p v-if="card.price" class="c-card__price">{{card.price}}</p>
         <p v-if="card.price" class="c-card__shadowPrice">{{card.price}}</p>
         <p v-if="card.price" class="c-card__text h-mb--3">Per mounth</p>
@@ -43,8 +44,8 @@ export default {
 .c-section {
   background-color: $darkBlue;
   color: $white;
-  padding-bottom: 12rem;
-  margin-bottom: 25rem;
+  padding-bottom: 10rem;
+  margin-bottom: 22rem;
 }
 .c-card {
   width: calc((100% / 3) - 4rem);
@@ -75,7 +76,7 @@ export default {
   }
   &__shadowPrice {
     position: absolute;
-    top: -.75rem;
+    top: -1.25rem;
     right: -.5rem;
     font-size: 12rem;
     line-height: 12rem;

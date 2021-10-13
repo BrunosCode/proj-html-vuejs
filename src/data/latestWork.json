@@ -4,39 +4,44 @@
     "title": "Latest work",
     "works": [
         {
-            "title": "Basket of Flower on table 0",
+            "title": "Basket of Flower on table",
             "subtitle": "Branding Strategy",
             "img": "8wa60okr-1-790x576.jpg"
         },
         {
-            "title": "Basket of Flower on table 1",
+            "title": "Purink Product",
+            "subtitle": "Digital Experince",
+            "img": "DRY-1-790x576.jpg"
+        },
+        {
+            "title": "Satisfy Poster",
+            "subtitle": "Branding Strategy",
+            "img": "a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg"
+        },
+        {
+            "title": "Mock-up",
+            "subtitle": "Digital Experiece",
+            "img": "84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg"
+        },
+        {
+            "title": "Basket of Flower on table",
             "subtitle": "Branding Strategy",
             "img": "8wa60okr-1-790x576.jpg"
         },
         {
-            "title": "Basket of Flower on table 2",
-            "subtitle": "Branding Strategy",
-            "img": "8wa60okr-1-790x576.jpg"
+            "title": "Purink Product",
+            "subtitle": "Digital Experince",
+            "img": "DRY-1-790x576.jpg"
         },
         {
-            "title": "Basket of Flower on table 3",
+            "title": "Satisfy Poster",
             "subtitle": "Branding Strategy",
-            "img": "8wa60okr-1-790x576.jpg"
+            "img": "a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg"
         },
         {
-            "title": "Basket of Flower on table 4",
-            "subtitle": "Branding Strategy",
-            "img": "8wa60okr-1-790x576.jpg"
-        },
-        {
-            "title": "Basket of Flower on table 5",
-            "subtitle": "Branding Strategy",
-            "img": "8wa60okr-1-790x576.jpg"
-        },
-        {
-            "title": "Basket of Flower on table 6",
-            "subtitle": "Branding Strategy",
-            "img": "8wa60okr-1-790x576.jpg"
-        }
+            "title": "Mock-up",
+            "subtitle": "Digital Experiece",
+            "img": "84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg"
+        }        
     ]
 }

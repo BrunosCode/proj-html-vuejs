@@ -6,7 +6,7 @@
       <SplitHero :content="homeHero" class="h-py--4" />
       <ColumnsSection :content="ourServices" class="h-py--4"/>
       <SplitHero :content="startYourProject" class="h-py--3" />
-      <CarouselSection :content="latestWork" class="h-py--3" />
+      <CarouselSection :content="latestWork" class="h-py--4" />
       <CardsSection :content="ourPricing" class="h-py--4" />
       <PostsSection :content="latestPosts" class="h-py--4" />
       <TestimonialsSection :content="testimonials" class="h-py--3" />
@@ -77,5 +77,9 @@ export default {
 <style lang="scss">
 @import "./assets/style/variables.scss";
 @import "./assets/style/common.scss";
+
+#app {
+  font-family: 'Roboto', sans-serif;
+}
 
 </style>

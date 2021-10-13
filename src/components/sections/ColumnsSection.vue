@@ -3,7 +3,7 @@
     <div class="l-container">
       <SectionIntro :content="content" />
                 
-      <div class="l-row">
+      <div class="l-row l-alignCenter">
         <div v-for="(col, i) in content.columns" :key="i" class="l-col l-col--1fourth l-alignCenter c-col h-p--4">
           <img v-if="col.img" class="c-col__img h-mb--2" :src="require(`../../assets/images/${col.img.src}`)" :alt="col.img.alt">
           <h3 v-if="col.title" class="c-col__title h-mb--2">{{col.title}}</h3>
@@ -38,15 +38,7 @@ export default {
 @import "../../assets/style/variables.scss";
 @import "../../assets/style/mixins.scss";
 
-.c-intro {
+.c-col {
   text-align: center;
-
-  &__title {
-    text-transform: capitalize;
-    font-size: 2.5rem;
-  }
-  &__pretitle {
-    color: $magenta;
-  }
 }
 </style>

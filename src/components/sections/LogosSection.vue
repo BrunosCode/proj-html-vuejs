@@ -1,7 +1,7 @@
 <template>
   <section class="c-section">
     <div class="l-container">
-      <div class="l-row l-spaceAround h-my--4">
+      <div class="l-row l-spaceAround l-alignCenter h-my--4">
         <div v-for="(logo, i) in content.logos" :key="i" 
         class="c-logo">
           <img v-if="logo.img" :src="require(`../../assets/images/${logo.img}`)" :alt="logo.alt"

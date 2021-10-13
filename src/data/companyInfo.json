@@ -9,22 +9,22 @@
         {
             "social": "instagram",
             "link": "#",
-            "icon": ""
+            "icon": "instagram"
         },
         {
             "social": "linkedin",
             "link": "#",
-            "icon": ""
+            "icon": "linkedin-in"
         },
         {
             "social": "facebook",
             "link": "#",
-            "icon": ""
+            "icon": "facebook-f"
         },
         {
             "social": "twitter",
             "link": "#",
-            "icon": ""
+            "icon": "twitter"
         }
     ]
 }
