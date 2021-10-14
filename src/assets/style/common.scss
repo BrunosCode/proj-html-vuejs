@@ -1,4 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,900&display=swap');
 @import "./variables.scss";
 @import "./mixins.scss";
 
@@ -9,9 +8,14 @@
     margin: 0;
 }
 
+// RESET STRONG
+strong {
+  font-weight: 900;
+}
+
 // LAYOUTS
 .l-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
 }
@@ -72,6 +76,20 @@
     float: left;
 }
 // COMPONETS
+.c-pretitle {
+  font-weight: 400; 
+  text-transform: capitalize;
+}
+.c-title {
+  font-weight: 400;
+  text-transform: capitalize; 
+}
+.c-text {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
 .c-link {
     text-decoration: none;
     color: inherit;
@@ -84,7 +102,7 @@
 .c-btn {
     text-decoration: none;
     padding: .5rem 2rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: $gray-900;
     background-color: $white;
     text-transform: capitalize;
@@ -95,10 +113,10 @@
 
     &--blue {
         color: $white;
-        @include bgGradient(90deg, $water, $lightBlue);
+        @include bgGradient(90deg, $water, $blue);
 
         &:hover {
-            @include bgGradient(270deg, $water, $lightBlue);
+            @include bgGradient(270deg, $water, $blue);
         }
     }
 
@@ -132,6 +150,88 @@
 }
 
 // HELPERS
+.h-listReset {
+  list-style: none;
+}
+// colors variation
+.h-bg--white,
+.c-card.h-bg--white {
+  background: white;
+  .c-pretitle {
+    color: $gray-900;
+  }
+  .c-title {
+    color: $gray-900;
+  }
+  .c-subtitle {
+    color: $gray-500;
+  }
+  .c-text {
+    color: $gray-500;
+  }
+}
+.h-bg--redGradient,
+.c-card.h-bg--redGradient {
+  @include bgGradient(330deg, $salmon, $magenta);
+  .c-pretitle {
+    color: $white;
+  }
+  .c-title {
+    color: $white;
+  }
+  .c-subtitle {
+    color: $white;
+  }
+  .c-text {
+    color: $white;
+  }
+}
+.h-bg--blueGradient,
+.c-card.h-bg--blueGradient {
+  position: relative;
+  z-index: 2;
+  color: $white;
+  @include bgGradient(180deg, $blue, $darkBlue);
+
+  .c-pretitle {
+    color: $white;
+  }
+  .c-title {
+    color: $white;
+  }
+  .c-subtitle {
+    color: $white;
+  }
+  .c-text {
+    color: $water;
+  }
+}
+.h-bg--darkBlue,
+.c-card.h-bg--darkBlue {
+  position: relative;
+  z-index: 2;
+  @include bgGradient(180deg, $blue, $darkBlue);
+
+  .c-pretitle {
+    color: $white;
+  }
+  .c-title {
+    color: $white;
+  }
+  .c-subtitle {
+    color: $white;
+  }
+  .c-text {
+    color: $white;
+  }
+}
+
+.h-textCenter {
+  text-align: center;
+}
+
+
+// Padding and margin
 $sizes: .5rem, 1rem, 2rem, 3rem, 4rem, 5rem;
 
 // Padding helpers
@@ -188,13 +288,4 @@ $sizes: .5rem, 1rem, 2rem, 3rem, 4rem, 5rem;
   .h-mb--#{$i} {
     margin-bottom: $size;
   }
-}
-
-
-.h-bg--primary {
-    background: $blue;
-}
-
-.h-listReset {
-    list-style: none;
 }
