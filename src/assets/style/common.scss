@@ -18,6 +18,21 @@ strong {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
+
+    @media screen and (max-width: 1400px) {
+      max-width: 1200px;
+    }
+    @media screen and (max-width: 1200px) {
+      max-width: 900px;
+    }
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      padding: 0 4rem;
+    }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      padding: 0 2rem;
+    }
 }
 .l-grid {
     display: grid;
@@ -34,7 +49,7 @@ strong {
 
     &--reversed {
         flex-direction: row-reverse;
-    }
+    }  
 }
 .l-col {
     display: flex;
@@ -52,6 +67,9 @@ strong {
     &--1fourth {
         width: 25%;
     }
+}
+.l-wrap {
+  flex-wrap: wrap;
 }
 .l-spaceAround {
     justify-content: space-around;
@@ -107,6 +125,7 @@ strong {
     background-color: $white;
     text-transform: capitalize;
     border: none;
+    white-space: nowrap;
     &:hover {
         cursor: pointer;
     }
@@ -152,6 +171,11 @@ strong {
 // HELPERS
 .h-listReset {
   list-style: none;
+}
+.h-clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 // colors variation
 .h-bg--white,
@@ -208,8 +232,6 @@ strong {
 }
 .h-bg--darkBlue,
 .c-card.h-bg--darkBlue {
-  position: relative;
-  z-index: 2;
   @include bgGradient(180deg, $blue, $darkBlue);
 
   .c-pretitle {

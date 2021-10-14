@@ -1,7 +1,8 @@
 {
     "component": "CarouselSection",
+    "bg": "white",
     "pretitle": "Porfolio",
-    "title": "Latest work",
+    "title": "<strong>Latest</strong> work",
     "works": [
         {
             "title": "Basket of Flower on table",

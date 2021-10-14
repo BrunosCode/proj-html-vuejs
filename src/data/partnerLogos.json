@@ -1,25 +1,31 @@
 {
     "component": "LogosSection",
+    "bg": "white",
     "logos": [
         {
             "img": "client-1-1.png",
-            "alt": "Golden"
+            "alt": "Golden",
+            "link": "#"
         },
         {
             "img": "clienty-2.png",
-            "alt": "Golden"
+            "alt": "Golden",
+            "link": "#"
         },
         {
             "img": "clienty-3.png",
-            "alt": "Golden"
+            "alt": "Golden",
+            "link": "#"
         },
         {
             "img": "clienty-4.png",
-            "alt": "Golden"
+            "alt": "Golden",
+            "link": "#"
         },
         {
             "img": "client-5.png",
-            "alt": "Golden"
+            "alt": "Golden",
+            "link": "#"
         }
     ]
 }

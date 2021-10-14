@@ -1,7 +1,8 @@
 {
     "component": "SplitHero",
-    "title": "Business planning digital technology modern solution !",
-    "text": "When, while the valley teems with vapour around meand the meridian sun strikes the upper surface .",
+    "bg": "blueGradient",
+    "title": "<strong>Business planning</strong><br> digital technology<br> <strong>modern solution !</strong>",
+    "text": "When, while the valley teems with vapour around<br> meand the meridian sun strikes the upper surface .",
     "buttons": [
         {
             "text": "Try it now",

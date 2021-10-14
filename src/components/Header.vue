@@ -1,6 +1,7 @@
 <template>
-  <header :class="`h-bg--${bgColor}`" class="c-header h-p--2">
-    <div class="l-container l-row l-spaceBetween l-alignCenter">
+  <header class="c-header h-p--2">
+    <div class="c-header__bg"></div>
+    <div class="l-container l-row l-spaceBetween l-alignCenter c-header__content">
       <Logo/>
       <nav class="c-header__nav">
         <!-- Print data from the prop json file -->
@@ -11,7 +12,7 @@
           </li>
           <li v-for="(btn, i) in headerNav.buttons" :key="`${i} + 6`">
             <a :class="`c-btn--${btn.type}`" :href="btn.link" 
-            class="c-btn h-ml--2">{{btn.text}}</a>
+            class="c-btn c-header__btn h-ml--2">{{btn.text}}</a>
           </li>
         </ul>
       </nav>
@@ -36,16 +37,49 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/style/variables.scss";
+@import "../assets/style/mixins.scss";
 
 .c-header {
-  color: $white;
+  width: 100%;
+  &__bg {
+    position: fixed;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: $blue;
+  }
+
+  &__content {
+    position: fixed;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
 
   &__link {
     text-transform: capitalize;
+    color: $white;
 
     &.h-active {
       font-size: 700;
       color: $magenta;
+    }
+  }
+  &__btn {
+    padding: .5rem 1rem;
+  }
+  
+  @media screen and (max-width: 600px) {
+    &__content {
+      justify-content: center;
+    }
+    &__btn,
+    &__link {
+      display: none;
     }
   }
 }

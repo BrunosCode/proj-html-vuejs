@@ -1,20 +1,22 @@
 {
     "component": "CardSection",
+    "bg": "darkBlue",
     "pretitle": "Price list",
-    "title": "Our pricing",
+    "title": "<strong>Our</strong> pricing",
     "text": "When, while the lovely valley teems with vapour around meand the",
     "cards": [
         {
             "title": "Designing",
             "subtitle": "process",
             "price": "40",
-            "color": "white",
+            "currency": "$",
+            "bg": "white",
             "features": [
-                "Creative design enabled",
-                "Vibrant color usage",
-                "Eye catching design",
-                "Extreme typography",
-                "Exceptional design"
+                "<strong>Creative</strong> design enabled",
+                "<strong>Vibrant</strong> color usage",
+                "<strong>Eye</strong> catching design",
+                "<strong>Extreme</strong> typography",
+                "<strong>Exceptional</strong> design"
             ],
             "button": {
                 "text": "Order now",
@@ -26,13 +28,14 @@
             "title": "Developing",
             "subtitle": "product",
             "price": "60",
-            "color": "red",
+            "currency": "$",
+            "bg": "redGradient",
             "features": [
-                "Creative design enabled",
-                "Vibrant color usage",
-                "Eye catching design",
-                "Extreme typography",
-                "Exceptional design"
+                "<strong>Creative</strong> design enabled",
+                "<strong>Vibrant</strong> color usage",
+                "<strong>Eye</strong> catching design",
+                "<strong>Extreme</strong> typography",
+                "<strong>Exceptional</strong> design"
             ],
             "button": {
                 "text": "Order now",
@@ -44,13 +47,14 @@
             "title": "Supporting",
             "subtitle": "clients",
             "price": "80",
-            "color": "white",
+            "currency": "$",
+            "bg": "white",
             "features": [
-                "Creative design enabled",
-                "Vibrant color usage",
-                "Eye catching design",
-                "Extreme typography",
-                "Exceptional design"
+                "<strong>Creative</strong> design enabled",
+                "<strong>Vibrant</strong> color usage",
+                "<strong>Eye</strong> catching design",
+                "<strong>Extreme</strong> typography",
+                "<strong>Exceptional</strong> design"
             ],
             "button": {
                 "text": "Order now",

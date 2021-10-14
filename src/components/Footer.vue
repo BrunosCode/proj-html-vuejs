@@ -3,29 +3,41 @@
     <CtaBanner :content="cta" class="c-footer__banner h-py--4" />
 
     <!-- Upper footer -->
-    <div class="l-container l-row h-pb--4">
-      <div class="l-col--1fourth">
+    <div class="l-container l-row l-wrap h-pb--4">
+      <div class="l-col--1fourth h-mb--2 h-px--1">
         <Logo class="h-mb--1"/>
-        <p class="c-footer__text">{{companyInfo.slogan}}</p>
+        <p v-if="companyInfo.slogan" v-html="companyInfo.slogan" class="c-text"></p>
       </div>
 
       <nav v-for="(nav, i) in footerNav" :key="i"
-      class="c-footer__nav l-col--1fourth h-px--3">
-        <h3 class="c-footer__title h-mb--1">{{nav.title}}</h3>
+      class="c-footer__nav l-col--1fourth h-mb--2 h-px--1">
+        <h3 v-if="nav.title" v-html="nav.title" class="c-title h-mb--1"></h3>
         <!-- Print data from the prop json file -->
         <ul class="h-listReset">
           <li v-for="(link, i) in nav.links" :key="i" class="h-mb--1">
-            <a :class="{'h-active': link.text === 'home'}" 
-            :href="link.link" class="c-link c-footer__link">{{link.text}}</a>
+            <a :class="{'h-active': link.text === 'home'}" :href="link.link" :alt="link.text"
+            class="c-link">
+              {{link.text}}
+              <!-- <template v-hmtl="link.text" ></template> -->
+            </a>
           </li>
         </ul>
       </nav>
 
-      <div class="l-col--1fourth">
-        <h3 class="c-footer__title h-mb--1">Contact Us</h3>
-        <p class="c-footer__text h-mb--1"><strong>Address:</strong> {{companyInfo.address}}</p>
-        <p class="c-footer__text"><strong>Phone:</strong> {{companyInfo.phone}}</p>
-        <p class="c-footer__text"><strong>Email:</strong> {{companyInfo.email}}</p>
+      <div class="l-col--1fourth h-mb--2 h-px--1">
+        <h3 class="c-title c-footer__title h-mb--2">Contact Us</h3>
+        <p v-if="companyInfo.address" class="h-mb--2"> 
+          <span class="c-subtitle">Address: </span>
+          <span class="c-text">{{companyInfo.address}}</span>
+        </p>
+        <p v-if="companyInfo.phone" class="h-mb--1">
+          <span class="c-subtitle">Phone: </span>
+          <a :href="`tel:${companyInfo.phone}`" class="c-link">{{companyInfo.phone}}</a>
+        </p>
+        <p v-if="companyInfo.email"> 
+          <span class="c-subtitle">Email: </span>
+          <a :href="`mailto:${companyInfo.email}`" class="c-link">{{companyInfo.email}}</a>
+        </p>
       </div>
     </div>
 
@@ -61,7 +73,8 @@ export default {
     return {
       cta: {
         "title": "We offer awesome services",
-        "text": "When, while lovely valley teems with vapour around meand meridian sun strikes the upper surface."
+        "text": "When, while lovely valley teems with vapour around meand meridian sun strikes the upper surface.",
+        "bg": "redGradient"
       }
     }
   }
@@ -81,14 +94,39 @@ export default {
     top: -5rem;
   }
 
-  &__title,
-  &__link {
+  .c-subtitle {
+    font-weight: 700;
+    opacity: 1;
+  }
+
+  .c-title {
     text-transform: capitalize;
+    font-weight: 700;
+  }
+  .c-link {
+    text-transform: capitalize;
+  }
+
+  .c-text,
+  .c-link {
+    opacity: .7;
   }
 
   &__bottom {
     border-top: 1px solid $opacity-white-400;
     padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .l-col--1fourth {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l-col--1fourth {
+    width: 100%;
+    text-align: center;
   }
 }
 

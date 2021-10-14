@@ -1,12 +1,12 @@
 <template>
-  <section class="c-section">
+  <section :class="`h-bg--${content.bg}`" class="c-section">
     <div class="l-container">
       <SectionIntro :content="content" />
 
       <div class="l-row">
         <div v-for="(post, i) in content.posts" :key="i" 
-        :class="post.img ? 'l-row l-spaceBetween l-alignEnd l-col--half' : 'l-col l-alignStart l-col--1fourth'" 
-        class="c-post h-p--2 h-mx--2">
+        :class="post.img ? 'l-row l-spaceBetween l-row--mobileCol l-alignEnd l-col--half' : 'l-col l-alignStart l-col--1fourth'" 
+        class="c-post h-p--2 h-m--2">
           <img v-if="post.img" :src="require(`../../assets/images/${post.img}`)" :alt="post.title"
           class="c-post__img">
           <div :class="{'l-col--2third': post.img}" class="c-post__info">
@@ -14,8 +14,10 @@
             <h3 v-if="post.title" class="c-post__title h-mb--2">{{post.title}}</h3>
             <p v-if="post.text" class="c-post__text h-mb--2">{{post.text}}</p>
           </div>
-          <a v-if="post.button" :href="post.button.link" 
-          class="c-btn c-post__btn h-mb--2">{{post.button.text}}</a>
+          <div class="h-py--2">
+            <a v-if="post.button" :href="post.button.link" 
+            class="c-btn c-post__btn">{{post.button.text}}</a>
+          </div>
         </div>  
       </div>
     </div>
@@ -40,6 +42,12 @@ export default {
 @import "../../assets/style/variables.scss";
 @import "../../assets/style/mixins.scss";
 
+@media screen and (max-width: 1200px) {
+    .l-row {
+      flex-wrap: wrap;
+    }
+} 
+
 .c-post {
   color: $white;
   @include bgGradient(330deg, $darkBlue, $blue);
@@ -49,8 +57,33 @@ export default {
 
   &__info,
   &__btn {
-    z-index: 2;
+    position: relative;
+    z-index: 1;
   }
+
+  @media screen and (max-width: 1200px) {
+      & {
+        display: block;
+        &.l-col--half,
+        &.l-col--2third,
+        &.l-col--1third {
+          width: calc(100% - 2rem);
+        }
+        &.l-col--1fourth {
+          width: calc(50% - 2rem);
+        }
+      }
+  } 
+  @media screen and (max-width: 600px) {
+      & {
+        text-align: center;
+        display: block;
+        &.l-col--1fourth,
+        &.l-col--half {
+          width: calc(100% - 2rem);
+        }
+      }
+  } 
 
   &__btn {
     &:hover {
@@ -70,6 +103,7 @@ export default {
     height: 100%;
     object-fit: cover;
     opacity: 90%;
+    z-index: 0;
   }
 }
 

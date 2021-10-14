@@ -1,18 +1,19 @@
 <template>
-  <section class="c-section">
+  <section :class="`h-bg--${content.bg}`" class="c-section">
     <div class="l-container">
       <SectionIntro :content="content" />
                 
-      <div class="l-row l-alignCenter">
-        <div v-for="(col, i) in content.columns" :key="i" class="l-col l-col--1fourth l-alignCenter c-col h-p--4">
-          <img v-if="col.img" class="c-col__img h-mb--2" :src="require(`../../assets/images/${col.img.src}`)" :alt="col.img.alt">
-          <h3 v-if="col.title" class="c-col__title h-mb--2">{{col.title}}</h3>
-          <p v-if="col.text" class="c-col__text">{{col.text}}</p>
+      <div class="l-row l-wrap l-alignCenter">
+        <div v-for="(col, i) in content.columns" :key="i" class="l-col l-col--1fourth l-alignCenter h-textCenter h-p--4">
+          <img v-if="col.img" :src="require(`../../assets/images/${col.img.src}`)" :alt="col.img.alt"
+          class="c-col__img h-mb--2">
+          <h3 v-if="col.title" v-html="col.title" class="c-title c-col__title h-mb--2"></h3>
+          <p v-if="col.text" v-html="col.text" class="c-text"></p>
         </div>
       </div>
 
       <div class="l-row l-justifyCenter">
-        <a v-for="(btn, i) in content.buttons" :key="i" 
+        <a v-for="(btn, i) in content.buttons" :key="`btn${i}`" 
         :href="btn.link" :class="`c-btn--${btn.type}`" 
         class="c-btn h-mx--1">{{btn.text}}</a>
       </div>
@@ -39,6 +40,25 @@ export default {
 @import "../../assets/style/mixins.scss";
 
 .c-col {
-  text-align: center;
+  &__title {
+    font-weight: 700;
+  }
+  @media screen and (max-width: 1200px) {
+    &__img {
+      width: 9rem;
+    }
+  }
 }
+
+@media screen and (max-width: 900px) {
+    .l-col--1fourth {
+      width: 50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .l-col--1fourth {
+      width: 100%;
+    }
+}
+
 </style>

@@ -1,23 +1,23 @@
 <template>
-  <section class="c-section">
+  <section :class="`h-bg--${content.bg}`" class="c-section">
     <div class="l-container">
       <SectionIntro :content="content" />
                 
-      <div class="l-row">
+      <div class="l-row l-wrap">
         <div v-for="(testimonial, i) in content.testimonials" :key="i" 
-        class="l-col l-col--1third l-alignCenter c-testimonial h-p--4">
+        class="l-col l-col--1third l-alignCenter c-testimonial h-textCenter h-p--4">
           <img v-if="testimonial.img" :src="require(`../../assets/images/${testimonial.img}`)" :alt="testimonial.name"
           class="c-testimonial__img h-mb--3">
-          <span class="c-testimonial__bgIcon"><i>"</i></span>
+          <span class="c-testimonial__bgIcon">"</span>
           <p class="c-testimonial__stars h-mb--2">
             <font-awesome-icon  v-for="(star, i) in testimonial.rating" :key="i" 
             :icon="[ 'fas', 'star' ]" />
-            <font-awesome-icon  v-for="(star, i) in 5-testimonial.rating" :key="i" 
+            <font-awesome-icon  v-for="(star, i) in 5-testimonial.rating" :key="5-i" 
             :icon="[ 'far', 'star' ]" />
           </p>
-          <p v-if="testimonial.review" class="c-testimonial__text h-mb--2">{{testimonial.review}}</p>
-          <h3 v-if="testimonial.name" class="c-testimonial__text h-mb--1">{{testimonial.name}}</h3>
-          <p v-if="testimonial.name" class="c-testimonial__text">{{testimonial.job}}</p>
+          <p v-if="testimonial.review" v-html="testimonial.review" class="c-text h-mb--2"></p>
+          <h3 v-if="testimonial.name" v-html="testimonial.name" class="c-title c-testimonial__name h-mb--1"></h3>
+          <p v-if="testimonial.name" v-html="testimonial.job" class="c-subtitle"></p>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
 import SectionIntro from "../elements/SectionIntro.vue"
 
 export default {
-  name: 'ColumnsSection',
+  name: 'TestimonialsSection',
   components: {
     SectionIntro
   },
@@ -43,11 +43,10 @@ export default {
 @import "../../assets/style/mixins.scss";
 
 .c-testimonial {
-  text-align: center;
   position: relative;
 
   &__img {
-    width: 7rem;
+    width: 6rem;
     border-radius: 50%;
     border: solid .25rem $magenta;
   }
@@ -56,7 +55,8 @@ export default {
     position: absolute;
     font-size: 20rem;
     top: 7rem;
-    left: 8.5rem;
+    margin-right: 2rem;
+    font-style: italic;
     color: $opacity-gray-100;
     font-weight: 900;
   }
@@ -64,6 +64,16 @@ export default {
   &__stars {
     color: $magenta;
   }
+
+  &__name {
+    font-weight: 700;
+  }
 }
+
+@media screen and (max-width: 900px) {
+    .l-col--1third {
+      width: 100%;
+    }
+  }
 
 </style>
