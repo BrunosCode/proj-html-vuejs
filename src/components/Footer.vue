@@ -44,7 +44,7 @@
     <!-- Bottom footer -->
     <div class="c-footer__bottom">
       <div class="l-container l-row l-spaceBetween ">
-        <p class="c-footer__text">{{companyInfo.copyright}}</p>
+        <p class="c-text">{{companyInfo.copyright}}</p>
         <div class="c-footer__icons">
           <a v-for="(icon, i) in companyInfo.socialLinks" :key="i" :href="icon.link" :alt="icon.social"
           class="c-link h-ml--2"><font-awesome-icon :icon="[ 'fab', icon.icon ]" /></a>
