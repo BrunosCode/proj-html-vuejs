@@ -17,7 +17,10 @@
         </ul>
         <a  v-if="card.button" :href="card.button.link" 
         :class="{'c-btn--arrowRed': card.button.type === 'arrowRed'}" 
-        class="c-btn c-btn--arrow">{{card.button.text}}</a>
+        class="c-btn c-btn--arrow">
+          <span class="h-mr--2">{{card.button.text}} </span>
+          <font-awesome-icon :icon="[ 'fas', 'long-arrow-alt-right' ]" />
+        </a>
       </div>
     </div>
   </section>

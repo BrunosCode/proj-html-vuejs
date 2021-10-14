@@ -151,11 +151,10 @@ strong {
     &--arrow {
         color: $magenta;
         padding: .5rem 1rem;
-
-        &::after {
-            content: ">";
-            margin-left: 1.5rem;
+        &:hover {
+          color: $blue;
         }
+
         &Red {
             color: $white;
             @include bgGradient(0deg, $salmon, $magenta);

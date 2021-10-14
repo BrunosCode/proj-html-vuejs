@@ -78,7 +78,8 @@ export default {
       return this.currentIndex + this.cardPerRow;
     },
     cardPerRow: function() {
-      return parseInt(window.innerWidth / 300); 
+      if (window.innerWidth < 1200) return parseInt(window.innerWidth / 300); 
+      return 3;
     },
   },
   methods: {
