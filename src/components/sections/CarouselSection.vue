@@ -21,6 +21,7 @@
             class="c-text"></p>
           </div>
         </div>
+
         <!-- Show cards -->
         <div v-for="(card, i) in content.works.slice(currentIndex, currentIndex + cardPerRow)" :key="i"
         class="l-col l-col--1third l-alignCenter c-carousel__card c-card h-mx--1">
@@ -31,6 +32,7 @@
             <p v-if="card.subtitle" v-html="card.subtitle" class="c-text"></p>
           </div>
         </div>
+
         <!-- Semi hidden card right -->
         <div v-if="content.works.length >= 3" class="l-col l-col--1third l-alignCenter c-carousel__card c-card h-mx--2">
           <img v-if="content.works[nextImg].img" class="c-card__img h-mb--2" 
@@ -44,6 +46,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Carusel control: bullets -->
       <div class="l-row l-justifyCenter h-my--2">
         <button v-for="(pullet, i) in content.works.slice(0, content.works.length - cardPerRow)" :key="i" @click="currentIndex = i"
         :class="{'h-active': i === currentIndex}" class="c-bullet h-mx--1"></button>
@@ -141,6 +145,11 @@ export default {
   &.h-active {
     background-color: $gray-500;
     border: solid .3rem $gray-200;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(.9);
   }
 }
 

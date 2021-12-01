@@ -1,9 +1,11 @@
 <template>
   <div :class="`h-bg--${content.bg}`" class="l-container l-row l-wrap l-alignCenter c-banner">
+    <!-- Call to action -->
     <div class="l-col l-col--2third l-justifyCenter">
       <h3 v-if="content.title" v-html="content.title" class="c-title c-banner__title h-mb--2"></h3>
       <p v-if="content.text" v-html="content.text" class="c-text"></p>
     </div>
+    <!-- Email subscription input -->
     <div class="l-col l-col--1third l-justifyCenter c-banner__input">
       <EmailSubscription />
     </div>

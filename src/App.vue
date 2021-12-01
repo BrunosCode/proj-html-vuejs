@@ -1,17 +1,27 @@
 <template>
+<!-- All json data is taken from config files, to simulate an api call -->
   <div id="app">
-    <Header :header-nav="headerNav" :bg-color="'primary'"/>
     <!-- Header with logo and headerNav component-->
+    <Header :header-nav="headerNav" :bg-color="'primary'"/>
+
     <main class="c-main">
       <SplitHero :content="homeHero" class="h-py--4" />
+
       <ColumnsSection :content="ourServices" class="h-py--4"/>
+
       <SplitHero :content="startYourProject" class="h-py--3" />
+
       <CarouselSection :content="latestWork" class="h-py--4" />
+
       <CardsSection :content="ourPricing" class="h-py--4" />
+
       <PostsSection :content="latestPosts" class="h-py--4" />
+
       <TestimonialsSection :content="testimonials" class="h-py--3" />
+
       <LogosSection :content="partnerLogos" class="h-pb--6" />
     </main>
+
     <Footer :footer-nav="footerNav" :company-info="companyInfo" :bg-color="'primary'"/>
   </div>
 </template>

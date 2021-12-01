@@ -6,15 +6,21 @@
       <div class="l-row l-wrap">
         <div v-for="(testimonial, i) in content.testimonials" :key="i" 
         class="l-col l-col--1third l-alignCenter c-testimonial h-textCenter h-p--4">
+
+
           <img v-if="testimonial.img" :src="require(`../../assets/images/${testimonial.img}`)" :alt="testimonial.name"
           class="c-testimonial__img h-mb--3">
           <span class="c-testimonial__bgIcon">"</span>
+
+          <!-- raiting -->
           <p class="c-testimonial__stars h-mb--2">
             <font-awesome-icon  v-for="(star, i) in testimonial.rating" :key="i" 
             :icon="[ 'fas', 'star' ]" />
             <font-awesome-icon  v-for="(star, i) in 5-testimonial.rating" :key="5-i" 
             :icon="[ 'far', 'star' ]" />
           </p>
+
+
           <p v-if="testimonial.review" v-html="testimonial.review" class="c-text h-mb--2"></p>
           <h3 v-if="testimonial.name" v-html="testimonial.name" class="c-title c-testimonial__name h-mb--1"></h3>
           <p v-if="testimonial.name" v-html="testimonial.job" class="c-subtitle"></p>

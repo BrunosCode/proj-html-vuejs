@@ -132,6 +132,7 @@ strong {
 
     &--blue {
         color: $white;
+        background-color: transparent;
         @include bgGradient(90deg, $water, $blue);
 
         &:hover {
@@ -141,6 +142,7 @@ strong {
 
     &--red {
         color: $white;
+        background-color: transparent;
         @include bgGradient(90deg, $salmon, $magenta);
 
         &:hover {
@@ -157,6 +159,7 @@ strong {
 
         &Red {
             color: $white;
+            background-color: transparent;
             @include bgGradient(0deg, $salmon, $magenta);
             
             &:hover {

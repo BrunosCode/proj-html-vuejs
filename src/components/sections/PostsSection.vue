@@ -4,6 +4,7 @@
       <SectionIntro :content="content" />
 
       <div class="l-row">
+        <!-- Post cards: if post has a image, c-post is double -->
         <div v-for="(post, i) in content.posts" :key="i" 
         :class="post.img ? 'l-row l-spaceBetween l-row--mobileCol l-alignEnd l-col--half' : 'l-col l-alignStart l-col--1fourth'" 
         class="c-post h-p--2 h-m--2">
@@ -59,6 +60,10 @@ export default {
   &__btn {
     position: relative;
     z-index: 1;
+  }
+
+  &__btn:hover {
+    transform: scale(.9);
   }
 
   @media screen and (max-width: 1200px) {

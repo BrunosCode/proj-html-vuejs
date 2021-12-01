@@ -3,6 +3,7 @@
     <div class="l-container">
       <SectionIntro :content="content" />
 
+      <!-- Row of logos -->
       <div class="l-row l-wrap l-spaceAround l-alignCenter h-my--4">
         <div v-for="(logo, i) in content.logos" :key="i" 
         class="c-logo h-m--2">

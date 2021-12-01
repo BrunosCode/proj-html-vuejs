@@ -4,6 +4,7 @@
       <SectionIntro :content="content" />
                 
       <div class="l-row l-wrap l-alignCenter">
+        <!-- Column elements -->
         <div v-for="(col, i) in content.columns" :key="i" class="l-col l-col--1fourth l-alignCenter h-textCenter h-p--4">
           <img v-if="col.img" :src="require(`../../assets/images/${col.img.src}`)" :alt="col.img.alt"
           class="c-col__img h-mb--2">

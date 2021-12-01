@@ -1,5 +1,7 @@
 <template>
+<!-- Split section, is reversable in the json data -->
   <section :class="`h-bg--${content.bg}`" class="c-hero">
+    <!-- Content -->
     <div :class="{'l-row--reversed': content.isReversed}" class="l-container l-row l-alignCenter">
       <div class="l-col--half">
         <h5 v-if="content.pretitle" v-html="content.pretitle" class="c-pretitle h-mb--2"></h5>
@@ -11,6 +13,8 @@
           class="c-btn h-mr--2 h-mb--1">{{btn.text}}</a>
         </div>
       </div>
+
+      <!-- Image -->
       <div class="l-col--half h-m--2">
         <img class="c-hero__img" :src="require(`../../assets/images/${content.img.src}`)" :alt="content.img.alt">
       </div>
